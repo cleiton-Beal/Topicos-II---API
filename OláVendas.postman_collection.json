@@ -1,0 +1,2064 @@
+{
+	"info": {
+		"_postman_id": "478bdf3b-be1e-4a59-8b32-cddef0456b44",
+		"name": "OláVendas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Criar usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Cleiton Beal",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "cleitonbeal1@hotmail.com",
+									"type": "default"
+								},
+								{
+									"key": "email_confirmation",
+									"value": "cleitonbeal1@hotmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/createUser",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"createUser"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Cleiton beal",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "cleitonbeal@hotmail.com",
+									"disabled": true
+								},
+								{
+									"key": "email_confirmation",
+									"value": "cleitonbeal@hotmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Criar usuário",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Cleiton Beal",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "cleitonbeal1@hotmail.com",
+											"type": "default"
+										},
+										{
+											"key": "email_confirmation",
+											"value": "cleitonbeal1@hotmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/createUser",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"createUser"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Cleiton beal",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "cleitonbeal@hotmail.com",
+											"disabled": true
+										},
+										{
+											"key": "email_confirmation",
+											"value": "cleitonbeal@hotmail.com",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8004"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 01:01:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 01:01:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Usuário criado com sucesso!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Gerar Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "cleitonbeal@hotmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Gerar Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "cleitonbeal@hotmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8004"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 01:01:28 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 01:01:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Token\": \"4|F4AwGMmezCbpmIXXe36D9z9OrXuxb3ZbxcZKypjk\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Editar Clientes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Cleiton Beal",
+									"type": "default"
+								},
+								{
+									"key": "cpfCnpj",
+									"value": "80974035017",
+									"type": "default"
+								},
+								{
+									"key": "telefone",
+									"value": "54996122421",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "cleitonbeal@hotmail.com",
+									"type": "default"
+								},
+								{
+									"key": "email_confirmation",
+									"value": "cleitonbeal@hotmail.com",
+									"type": "default"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "Único campo realmente necessário, o resto é opcional",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/Clientes/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"edit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cadastrar Cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Cleiton Beal",
+											"type": "default"
+										},
+										{
+											"key": "cpfCnpj",
+											"value": "80974035017",
+											"type": "default"
+										},
+										{
+											"key": "telefone",
+											"value": "54996122421",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "cleitonbeal@hotmail.com",
+											"type": "default"
+										},
+										{
+											"key": "email_confirmation",
+											"value": "cleitonbeal@hotmail.com",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Clientes/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Clientes",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8004"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 01:00:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 01:00:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Cliente Cadastrado com Sucesso!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Cadastrar Clientes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Cleiton Beal",
+									"type": "default"
+								},
+								{
+									"key": "cpfCnpj",
+									"value": "80974035017",
+									"type": "default"
+								},
+								{
+									"key": "telefone",
+									"value": "54996122421",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "cleitonbeal@hotmail.com",
+									"type": "default"
+								},
+								{
+									"key": "email_confirmation",
+									"value": "cleitonbeal@hotmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/Clientes/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cadastrar Cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Cleiton Beal",
+											"type": "default"
+										},
+										{
+											"key": "cpfCnpj",
+											"value": "80974035017",
+											"type": "default"
+										},
+										{
+											"key": "telefone",
+											"value": "54996122421",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "cleitonbeal@hotmail.com",
+											"type": "default"
+										},
+										{
+											"key": "email_confirmation",
+											"value": "cleitonbeal@hotmail.com",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Clientes/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Clientes",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8004"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 01:00:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 01:00:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Cliente Cadastrado com Sucesso!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Buscar Clientes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Clientes/buscar/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"buscar",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Buscar Clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Clientes/buscar/all",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Clientes",
+										"buscar",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:20:55 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:20:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Clientes Buscados com Sucesso!\",\n    \"Clientes\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"nome\": \"Cleiton Beal\",\n                \"cpfCnpj\": \"80974035017\",\n                \"telefone\": \"54996122421\",\n                \"email\": \"cleitonbeal@hotmail.com\",\n                \"created_at\": \"2022-09-24T01:00:22.000000Z\",\n                \"updated_at\": \"2022-09-24T16:12:33.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8001/api/Clientes/buscar/all?page=1\",\n        \"from\": 1,\n        \"last_page\": 4,\n        \"last_page_url\": \"http://127.0.0.1:8001/api/Clientes/buscar/all?page=4\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/Clientes/buscar/all?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/Clientes/buscar/all?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/Clientes/buscar/all?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/Clientes/buscar/all?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/Clientes/buscar/all?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://127.0.0.1:8001/api/Clientes/buscar/all?page=2\",\n        \"path\": \"http://127.0.0.1:8001/api/Clientes/buscar/all\",\n        \"per_page\": 1,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Clientes/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Editar Categorias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Congelados Bebidas",
+									"type": "default"
+								},
+								{
+									"key": "cores",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"description": "Único campo realmente necessário, o resto é opcional",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/Categorias/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias",
+								"edit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar Categorias",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Cleiton Beal",
+											"type": "default"
+										},
+										{
+											"key": "cores",
+											"value": "2",
+											"type": "default"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "Único campo realmente necessário, o resto é opcional",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Categorias/edit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Categorias",
+										"edit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:45:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:45:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Categoria Atualizada com Sucesso!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Cadastrar Categorias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Congelados",
+									"type": "default"
+								},
+								{
+									"key": "cores",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/Categorias/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cadastrar Categorias",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Cleiton Beal",
+											"type": "default"
+										},
+										{
+											"key": "cores",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Categorias/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Categorias",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:43:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:43:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Categoria Cadastrada com Sucesso!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Buscar Categorias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Categorias/buscar/Cong",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias",
+								"buscar",
+								"Cong"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Buscar Categorias",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Categorias/buscar/Cong",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Categorias",
+										"buscar",
+										"Cong"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:49:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:49:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Categorias Buscadas com Sucesso!\",\n    \"Categorias\": [\n        {\n            \"id\": 2,\n            \"nome\": \"Congelados Bebidas\",\n            \"cores\": \"1\",\n            \"created_at\": \"2022-09-24T16:47:44.000000Z\",\n            \"updated_at\": \"2022-09-24T16:48:20.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Excluir Categorias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Categorias/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Excluir Categorias",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Categorias/delete/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Categorias",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:50:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:50:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Exclusão ocorrida com Sucesso!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Editar Produtos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Refrigerante Coca-Cola que tá DOZE CONTO ",
+									"type": "default"
+								},
+								{
+									"key": "valor",
+									"value": "12.00",
+									"type": "default"
+								},
+								{
+									"key": "codBar",
+									"value": "10205552556563586",
+									"type": "default"
+								},
+								{
+									"key": "categoria",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "classificacaoFiscal",
+									"value": "199",
+									"type": "default"
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"description": "unico campo obrigatório",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/Produtos/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Produtos",
+								"edit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar Categorias",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Cleiton Beal",
+											"type": "default"
+										},
+										{
+											"key": "cores",
+											"value": "2",
+											"type": "default"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "Único campo realmente necessário, o resto é opcional",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Categorias/edit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Categorias",
+										"edit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:45:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:45:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Categoria Atualizada com Sucesso!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create produto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Refrigerante Coca-Cola",
+									"type": "default"
+								},
+								{
+									"key": "valor",
+									"value": "10.00",
+									"type": "default"
+								},
+								{
+									"key": "codBar",
+									"value": "10205552556563586",
+									"type": "default"
+								},
+								{
+									"key": "categoria",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "classificacaoFiscal",
+									"value": "200",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/Produtos/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Produtos",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar Categorias",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Cleiton Beal",
+											"type": "default"
+										},
+										{
+											"key": "cores",
+											"value": "2",
+											"type": "default"
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"description": "Único campo realmente necessário, o resto é opcional",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/Categorias/edit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Categorias",
+										"edit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:45:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:45:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Categoria Atualizada com Sucesso!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Buscar Produtos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Produtos/buscar/co",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Produtos",
+								"buscar",
+								"co"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Buscar Categorias",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Categorias/buscar/Cong",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Categorias",
+										"buscar",
+										"Cong"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:49:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:49:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Categorias Buscadas com Sucesso!\",\n    \"Categorias\": [\n        {\n            \"id\": 2,\n            \"nome\": \"Congelados Bebidas\",\n            \"cores\": \"1\",\n            \"created_at\": \"2022-09-24T16:47:44.000000Z\",\n            \"updated_at\": \"2022-09-24T16:48:20.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Excluir Produtos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Produtos/delete/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Produtos",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Excluir Categorias",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/Categorias/delete/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Categorias",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:50:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 16:50:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Exclusão ocorrida com Sucesso!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Classificação fiscal",
+			"item": [
+				{
+					"name": "Rodar Classificações fiscais para BD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/ClassificacoesFiscais/rodar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ClassificacoesFiscais",
+								"rodar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Classificacoes fiscais",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/ClassificacoesFiscais/Buscar/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ClassificacoesFiscais",
+								"Buscar",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/ClassificacoesFiscais/Buscar/all",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"ClassificacoesFiscais",
+										"Buscar",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 17:44:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 17:44:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Categorias Buscadas com Sucesso!\",\n    \"Categorias\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"Codigo\": null,\n                \"Descricao\": null,\n                \"Data_Inicio\": null,\n                \"Data_Fim\": null,\n                \"Tipo_Ato\": null,\n                \"Numero_Ato\": null,\n                \"Ano_Ato\": null,\n                \"created_at\": \"2022-09-24T17:25:21.000000Z\",\n                \"updated_at\": \"2022-09-24T17:25:21.000000Z\"\n            },\n            {\n                \"id\": 202,\n                \"Codigo\": \"0101.30.00\",\n                \"Descricao\": \"- Asininos\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:02.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:02.000000Z\"\n            },\n            {\n                \"id\": 422,\n                \"Codigo\": \"0302.3\",\n                \"Descricao\": \"- Atuns (do gênero <i>Thunnus</i>), bonito-listrado (gaiado*) (<i>Katsuwonus </i><i>pelamis</i>), exceto subprodutos comestíveis de peixes das subposições 0302.91 a 0302.99:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:04.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:04.000000Z\"\n            },\n            {\n                \"id\": 258,\n                \"Codigo\": \"0106.3\",\n                \"Descricao\": \"- Aves:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 205,\n                \"Codigo\": \"0102.2\",\n                \"Descricao\": \"- Bovinos domésticos:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:02.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:02.000000Z\"\n            },\n            {\n                \"id\": 214,\n                \"Codigo\": \"0102.3\",\n                \"Descricao\": \"- Búfalos:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:02.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:02.000000Z\"\n            },\n            {\n                \"id\": 235,\n                \"Codigo\": \"0104.20\",\n                \"Descricao\": \"- Caprinos\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:02.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:02.000000Z\"\n            },\n            {\n                \"id\": 271,\n                \"Codigo\": \"0201.10.00\",\n                \"Descricao\": \"- Carcaças e meias-carcaças\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 278,\n                \"Codigo\": \"0202.10.00\",\n                \"Descricao\": \"- Carcaças e meias-carcaças\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 299,\n                \"Codigo\": \"0204.30.00\",\n                \"Descricao\": \"- Carcaças e meias-carcaças de cordeiro, congeladas\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 294,\n                \"Codigo\": \"0204.10.00\",\n                \"Descricao\": \"- Carcaças e meias-carcaças de cordeiro, frescas ou refrigeradas\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 365,\n                \"Codigo\": \"0210.20.00\",\n                \"Descricao\": \"- Carnes da espécie bovina\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:04.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:04.000000Z\"\n            },\n            {\n                \"id\": 361,\n                \"Codigo\": \"0210.1\",\n                \"Descricao\": \"- Carnes da espécie suína:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:04.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:04.000000Z\"\n            },\n            {\n                \"id\": 304,\n                \"Codigo\": \"0204.50.00\",\n                \"Descricao\": \"- Carnes de animais da espécie caprina\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 199,\n                \"Codigo\": \"0101.2\",\n                \"Descricao\": \"- Cavalos:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:02.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:02.000000Z\"\n            },\n            {\n                \"id\": 289,\n                \"Codigo\": \"0203.2\",\n                \"Descricao\": \"- Congeladas:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 308,\n                \"Codigo\": \"0206.2\",\n                \"Descricao\": \"- Da espécie bovina, congeladas:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 307,\n                \"Codigo\": \"0206.10.00\",\n                \"Descricao\": \"- Da espécie bovina, frescas ou refrigeradas\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 315,\n                \"Codigo\": \"0206.4\",\n                \"Descricao\": \"- Da espécie suína, congeladas:\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            },\n            {\n                \"id\": 314,\n                \"Codigo\": \"0206.30.00\",\n                \"Descricao\": \"- Da espécie suína, frescas ou refrigeradas\",\n                \"Data_Inicio\": \"2022-01-04\",\n                \"Data_Fim\": \"1970-01-01\",\n                \"Tipo_Ato\": \"Res Camex\",\n                \"Numero_Ato\": \"000272\",\n                \"Ano_Ato\": \"2021\",\n                \"created_at\": \"2022-09-24T17:36:03.000000Z\",\n                \"updated_at\": \"2022-09-24T17:36:03.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=1\",\n        \"from\": 1,\n        \"last_page\": 12,\n        \"last_page_url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=12\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=7\",\n                \"label\": \"7\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=8\",\n                \"label\": \"8\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=9\",\n                \"label\": \"9\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=10\",\n                \"label\": \"10\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=11\",\n                \"label\": \"11\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=12\",\n                \"label\": \"12\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all?page=2\",\n        \"path\": \"http://127.0.0.1:8001/api/ClassificacoesFiscais/Buscar/all\",\n        \"per_page\": 20,\n        \"prev_page_url\": null,\n        \"to\": 20,\n        \"total\": 234\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vendas",
+			"item": [
+				{
+					"name": "Cadastrar Venda",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente\" : 2,\n    \"produtos\" : [\n        {\n            \"id\" : 3,\n            \"quantidade\" : 2,\n            \"valorProduto\" : 12.00,\n            \"nomeProduto\" : \"Refrigerante Coca-Cola que tá DOZE CONTO\"\n\n        },\n        {\n            \"id\" : 3,\n            \"quantidade\" : 2,\n            \"valorProduto\" : 10.00,\n            \"nomeProduto\" : \"Refrigerante Coca-Cola que tá DEZ CONTO\"\n\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vender",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vender"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cliente\" : 2,\n    \"produtos\" : [\n        {\n            \"id\" : 3,\n            \"quantidade\" : 2,\n            \"valorProduto\" : 12.00,\n            \"nomeProduto\" : \"Refrigerante Coca-Cola que tá DOZE CONTO\"\n\n        },\n        {\n            \"id\" : 3,\n            \"quantidade\" : 2,\n            \"valorProduto\" : 10.00,\n            \"nomeProduto\" : \"Refrigerante Coca-Cola que tá DEZ CONTO\"\n\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/vender",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"vender"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 19:14:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 19:14:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"Mensagem\": \"Venda Efetuada com sucesso!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "relatorio diario",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "relatorio diario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/relatorio/2022-09-24",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"relatorio",
+										"2022-09-24"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 22:10:27 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 22:10:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Sucesso\": true,\n    \"NumeroVendas\": 5,\n    \"VendasPorProduto\": {\n        \"Refrigerante Coca-Cola que tá DOZE CONTO\": {\n            \"QuantidadeVendida\": 4,\n            \"ValorVendido\": 44\n        }\n    },\n    \"Mensagem\": \"Relatório gerado com Sucesso! \"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "127.0.0.1:8001",
+			"type": "default"
+		},
+		{
+			"key": "token",
+			"value": "rprA9yeznEkV8Al4qUs457p6F6tX56xqNdaF0uc3",
+			"type": "default"
+		}
+	]
+}
