@@ -29,10 +29,10 @@ class ProdutosController extends Controller
 
         try {
             if($consulta == 'all'){
-               $query = Produtos::orderBy('nome', 'asc')->paginate(20);
+               $query = Produtos::select('produtos.*','categorias.nome as categoria')->join('categorias','categorias.id','=','produtos.categoria')->orderBy('nome', 'asc')->get();
             }
             else {
-                $query = Produtos::where('nome','LIKE', '%'.$consulta.'%')->orWhere('classificacaoFiscal','LIKE','%'.$consulta.'%')->orWhere('categoria','LIKE','%'.$consulta.'%')->orWhere('codBar','LIKE','%'.$consulta.'%')->orderBy('nome','asc')->paginate(20);
+                $query = Produtos::select('produtos.*','categorias.nome as categoria')->join('categorias','categorias.id','=','produtos.categoria')->where('produtos.nome','LIKE', '%'.$consulta.'%')->orWhere('produtos.classificacaoFiscal','LIKE','%'.$consulta.'%')->orWhere('produtos.categoria','LIKE','%'.$consulta.'%')->orWhere('produtos.codBar','LIKE','%'.$consulta.'%')->orderBy('nome','asc')->get();
             }
             return response()->json(['Sucesso' => true, 'Mensagem' => 'Produtos Buscadas com Sucesso!' , 'Produtos' => $query]);
         } catch (Exception $e){
