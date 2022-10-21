@@ -26,8 +26,8 @@ class RequestProduto extends FormRequest
         return [
             'nome'                  => 'required|string',
             'valor'                 => 'required|numeric',
-            'codBar'                => 'required|string',
-            'categoria'             => 'required|integer',
+            'codBar'                => 'nullable|string',
+            'categoria'             => 'nullable|integer',
             'classificacaoFiscal'   => 'required|integer',
         ];
     }
