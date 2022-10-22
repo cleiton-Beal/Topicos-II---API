@@ -25,14 +25,21 @@ class ProdutosController extends Controller
         }
     }
 
-    public function getProduto($consulta) {
+    public function getProduto($consulta ,Request $request) {
 
         try {
-            if($consulta == 'all'){
-               $query = Produtos::select('produtos.*','categorias.nome as categoria')->join('categorias','categorias.id','=','produtos.categoria')->orderBy('nome', 'asc')->get();
+
+            if ($request->id){
+                $query = Produtos::select('produtos.*','categorias.nome as categoria')->join('categorias','categorias.id','=','produtos.categoria')->orderBy('nome', 'asc')->where('produtos.id', $request->id)->first();
+
+                $classificacao = ClassificacaoFiscal::where('id',$query->classificacaoFiscal)->first();
+                return response()->json(['Sucesso' => true, 'Mensagem' => 'Produtos Buscadas com Sucesso!' , 'Produtos' => $query , 'classificacao' => $classificacao]);
+            }
+            else if($consulta == 'all'){
+               $query = Produtos::select('produtos.*','categorias.nome as categoria')->leftJoin('categorias','categorias.id','=','produtos.categoria')->orderBy('nome', 'asc')->get();
             }
             else {
-                $query = Produtos::select('produtos.*','categorias.nome as categoria')->join('categorias','categorias.id','=','produtos.categoria')->where('produtos.nome','LIKE', '%'.$consulta.'%')->orWhere('produtos.classificacaoFiscal','LIKE','%'.$consulta.'%')->orWhere('produtos.categoria','LIKE','%'.$consulta.'%')->orWhere('produtos.codBar','LIKE','%'.$consulta.'%')->orderBy('nome','asc')->get();
+                $query = Produtos::select('produtos.*','categorias.nome as categoria')->leftJoin('categorias','categorias.id','=','produtos.categoria')->where('produtos.nome','LIKE', '%'.$consulta.'%')->orWhere('produtos.classificacaoFiscal','LIKE','%'.$consulta.'%')->orWhere('produtos.categoria','LIKE','%'.$consulta.'%')->orWhere('produtos.codBar','LIKE','%'.$consulta.'%')->orderBy('nome','asc')->get();
             }
             return response()->json(['Sucesso' => true, 'Mensagem' => 'Produtos Buscadas com Sucesso!' , 'Produtos' => $query]);
         } catch (Exception $e){
