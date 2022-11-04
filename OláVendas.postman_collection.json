@@ -191,19 +191,13 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "cleitonbeal@hotmail.com",
-									"type": "default"
-								},
-								{
-									"key": "password",
-									"value": "123456789",
-									"type": "default"
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"cleitonbeal@hotmail.com\",\n    \"password\" : \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
 							"raw": "{{url}}/api/login",
@@ -297,6 +291,34 @@
 							"body": "{\n    \"Sucesso\": true,\n    \"Token\": \"4|F4AwGMmezCbpmIXXe36D9z9OrXuxb3ZbxcZKypjk\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Buscar nome",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1955,8 +1977,29 @@
 				{
 					"name": "relatorio diario",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/relatorio/2022-09-24",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"relatorio",
+								"2022-09-24"
+							]
+						}
 					},
 					"response": [
 						{
@@ -2025,6 +2068,34 @@
 							"body": "{\n    \"Sucesso\": true,\n    \"NumeroVendas\": 5,\n    \"VendasPorProduto\": {\n        \"Refrigerante Coca-Cola que tá DOZE CONTO\": {\n            \"QuantidadeVendida\": 4,\n            \"ValorVendido\": 44\n        }\n    },\n    \"Mensagem\": \"Relatório gerado com Sucesso! \"\n}"
 						}
 					]
+				},
+				{
+					"name": "Buscar Vendas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/vendas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vendas"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
@@ -2052,7 +2123,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "127.0.0.1:8001",
+			"value": "127.0.0.1:8000",
 			"type": "default"
 		},
 		{

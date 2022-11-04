@@ -60,4 +60,5 @@ Route::middleware('auth:sanctum')->group( function(){
 
     Route::post('vender', [VendaController::class , 'GerarVenda']);
     Route::get('relatorio/{data}', [VendaController::class, 'GerarRelatorioDia']);
+    Route::get('/vendas', [VendaController::class, 'GetVendas']);
 });

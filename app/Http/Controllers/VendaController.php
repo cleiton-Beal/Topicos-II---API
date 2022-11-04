@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RequestVendas;
+use App\Models\clientes;
 use App\Models\ProdutoVendas;
 use App\Models\Venda;
 use Exception;
@@ -56,5 +57,23 @@ class VendaController extends Controller
 
         return response()->json(['Sucesso' => true, 'NumeroVendas' => $numVendas, 'VendasPorProduto' => $somaDosProdutos, 'Mensagem' => 'Relatório gerado com Sucesso! ']);
 
+    }
+
+    public function GetVendas() {
+        $vendas = Venda::orderBy('id','desc')->get();
+        $response = [];
+        foreach($vendas as $venda) {
+            $clientes = clientes::where('id', $venda->cliente)->first();
+            $valor = ProdutoVendas::select(DB::raw("sum(valorProduto*quantidade) as total"))->where('venda', $venda->id)->first();
+
+            $index = (object) ['id' => $venda->id, 'Cliente' => $clientes->nome, 'Valor' => $valor->total];
+            // if(empty($response)){
+            //     $response = [$index];
+            // }
+            // else {
+                array_push($response, $index);
+            // }
+        }
+        return response()->json(['Sucesso' => true, 'Mensagem' => 'Vendas buscadas com sucesso', 'Vendas' => $response]);
     }
 }
