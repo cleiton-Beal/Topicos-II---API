@@ -23,14 +23,19 @@ class ClientesController extends Controller
         }
     }
 
-    public function getClientes($consulta) {
+    public function getClientes($consulta, Request $request) {
 
         try {
-            if($consulta == 'all'){
-               $query = clientes::orderBy('nome', 'asc')->paginate(20);
+            if ($request->id){
+                $query = clientes::orderBy('nome', 'asc')->where('id', $request->id)->first();
+
+                return response()->json(['Sucesso' => true, 'Mensagem' => 'Cliente Buscado com Sucesso!' , 'Cliente' => $query ]);
+            }
+            else if($consulta == 'all'){
+               $query = clientes::orderBy('nome', 'asc')->get();
             }
             else {
-                $query = clientes::where('nome','LIKE', '%'.$consulta.'%')->orWhere('email','LIKE', '%'.$consulta.'%')->orWhere('cpfCnpj','LIKE', '%'.$consulta.'%')->orWhere('telefone','LIKE', '%'.$consulta.'%')->orderBy('nome','asc')->paginate(20);
+                $query = clientes::where('nome','LIKE', '%'.$consulta.'%')->orWhere('email','LIKE', '%'.$consulta.'%')->orWhere('cpfCnpj','LIKE', '%'.$consulta.'%')->orWhere('telefone','LIKE', '%'.$consulta.'%')->orderBy('nome','asc')->get();
             }
             return response()->json(['Sucesso' => true, 'Mensagem' => 'Clientes Buscados com Sucesso!' , 'Clientes' => $query]);
         } catch (Exception $e){
