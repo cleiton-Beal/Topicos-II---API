@@ -24,7 +24,7 @@ class RequestVendas extends FormRequest
     public function rules()
     {
         return [
-            'cliente' => 'required|integer',
+            'cliente' => 'nullable|integer',
             'produtos' => 'array|required',
             'produtos.*.id' => 'required',
             'produtos.*.quantidade' => 'required',

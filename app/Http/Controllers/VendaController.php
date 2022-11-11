@@ -76,4 +76,16 @@ class VendaController extends Controller
         }
         return response()->json(['Sucesso' => true, 'Mensagem' => 'Vendas buscadas com sucesso', 'Vendas' => $response]);
     }
+
+    public function Deletevenda($venda) {
+        try{
+            ProdutoVendas::where('venda', $venda)->delete();
+            Venda::where('id',$venda)->delete();
+        }
+        catch(Exception $e) {
+            Log::info($e);
+            return response()->json(['Sucesso' => false, 'Mensagem' => 'Ocorreram erros ao Excluir venda, entre em contato com o Suporte!']);
+        }
+        return response()->json(['Sucesso' => true, 'Mensagem' => 'Venda excluida com sucesso']);
+    }
 }
