@@ -61,5 +61,5 @@ Route::middleware('auth:sanctum')->group( function(){
     Route::post('vender', [VendaController::class , 'GerarVenda']);
     Route::get('relatorio/{data}', [VendaController::class, 'GerarRelatorioDia']);
     Route::get('/vendas', [VendaController::class, 'GetVendas']);
-    Route::delete('venda/{venda}', [VendaController::class, 'Deletevenda']);
+    Route::delete('vendas/{venda}', [VendaController::class, 'Deletevenda']);
 });

@@ -65,8 +65,8 @@ class VendaController extends Controller
         foreach($vendas as $venda) {
             $clientes = clientes::where('id', $venda->cliente)->first();
             $valor = ProdutoVendas::select(DB::raw("sum(valorProduto*quantidade) as total"))->where('venda', $venda->id)->first();
-
-            $index = (object) ['id' => $venda->id, 'Cliente' => $clientes->nome, 'Valor' => $valor->total];
+            $nome = $clientes == null ? null :$clientes->nome;
+            $index = (object) ['id' => $venda->id, 'Cliente' => $nome ?: null, 'Valor' => $valor->total];
             // if(empty($response)){
             //     $response = [$index];
             // }
