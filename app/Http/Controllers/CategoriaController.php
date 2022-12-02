@@ -45,7 +45,7 @@ class CategoriaController extends Controller
                 Log::info($request);
                 $categoria = Categorias::find($request->id);
                 $categoria->nome = ($request->nome)?:$categoria->nome;
-                $categoria->cores = ($request->cor)?: $categoria->cores;
+                $categoria->cores = ($request->cores)?: $categoria->cores;
                 $categoria->save();
                 return response()->json(['Sucesso' => true, 'Mensagem' => 'Categoria Atualizada com Sucesso!']);
             }
